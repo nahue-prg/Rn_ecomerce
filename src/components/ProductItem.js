@@ -38,10 +38,10 @@ const ProductItem = ({ item, navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 30,
+    marginHorizontal: 20,
     marginVertical: 10,
-    borderColor: colors.mediumOrange,
-    borderRadius: 30,
+    borderColor: colors.mediumBlue,
+    borderRadius: 10,
     borderWidth: 2,
     height: 100,
     justifyContent: "space-between",
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
-    fontSize: 15,
-    fontWeight: "700",
+    fontSize: 20,
+    fontWeight: "900",
     marginLeft: 20,
     width: "70%",
   },
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   image: {
-    marginRight: 20,
+    marginRight: 10,
   },
 });
 

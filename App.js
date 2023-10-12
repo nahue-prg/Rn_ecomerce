@@ -5,11 +5,15 @@ import { useFonts } from "expo-font";
 import TabNav from "./src/navigation/TabNav";
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";
+import Register from "./src/screens/Register";
+import Login from "./src/screens/Login";
+import AuthNav from "./src/navigation/AuthNav";
+import MainNav from "./src/navigation/MainNav";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Dancing: require("./assets/Fonts/FiraSans-Regular.ttf"),
-    Pacifico: require("./assets/Fonts/Roboto-Regular.ttf"),
+    Dancing: require("./assets/Fonts/DancingScript-Regular.ttf"),
+    Pacifico: require("./assets/Fonts/Pacifico-Regular.ttf"),
   });
 
   if (fontsLoaded === false) {
@@ -18,9 +22,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <TabNav />
-      </NavigationContainer>
+      <MainNav />
     </Provider>
   );
 }

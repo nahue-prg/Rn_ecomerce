@@ -18,13 +18,11 @@ const Products = ({ route, navigation }) => {
 
   const { data, isLoading, isError } = useGetProductsQuery();
 
-  console.log(data);
+  // console.log(data);
 
   const productsFilterByCategory = useSelector(
     (state) => state.homeSlice.productsFilterByCategory
   );
-
-  console.log("ITEM is category selected:", item);
 
   useEffect(() => {
     setCategoryProd(productsFilterByCategory);
@@ -40,12 +38,7 @@ const Products = ({ route, navigation }) => {
   return (
     <SafeAreaView>
       <Header title={item} navigation={navigation} />
-      <Pressable
-        style={{ marginLeft: 15, marginBottom: 10 }}
-        onPress={() => navigation.goBack()}
-      >
-        <AntDesign name="caretleft" size={24} color={colors.mediumOrange} />
-      </Pressable>
+
       <Search text={text} setText={setText} />
 
       <FlatList

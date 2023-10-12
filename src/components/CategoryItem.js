@@ -14,28 +14,28 @@ const CategoryItem = ({ item, navigation }) => {
 
   return (
     <Pressable onPress={() => onHandleItem()}>
-      <Text style={styles.categoryText}>{item}</Text>
+      <Text style={styles.categoryText}>{item.toUpperCase()}</Text>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
   categoryText: {
-    fontSize: 18,
+    fontSize: 22,
     marginHorizontal: 30,
-    marginVertical: 6,
+    marginVertical: 10,
     color: colors.white,
     alignItems: "center",
     justifyContent: "center",
 
     // BORDER STYLES
     borderColor: colors.white,
-    borderWidth: 1,
-    borderRadius: 30,
+    borderWidth: 2,
+    borderRadius: 20,
 
     // Text styles
     textAlign: "center",
-    padding: 6,
+    padding: 8,
   },
 });
 
